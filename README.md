@@ -30,6 +30,12 @@ Make sure to NOT connect the wifi module to anything higher than 3.3v!
 
 
 ### Configure RTC module
+Before using the RTC module to fetch the time, initial set up to set the time is needed.
+This is done by connecting the RTC as shown in the image below.
+![](https://github.com/knappologi/arduino-sound-sensor-with-wifi/blob/master/fritzsketch-setup-esp8266-01_smaller.png)
+
+Then a code used to set the time according to when the codes compiles from the computer to arduino is used. 
+
 
 
 ## Sources
