@@ -16,12 +16,22 @@ Additional items needed:
 ## Connecting the parts 
 Make sure to NOT connect the wifi module to anything higher than 3.3v!
 
-See image
+![](https://github.com/knappologi/arduino-sound-sensor-with-wifi/blob/master/fritzsketchwifiunortcmax4466_smaller.png)
 
 
-## Set up IDE 
 
-## Configure ESP8266-01 / wifi module
+## Initial configuration
 
-## Configure RTC module
+### Set up IDE & download libraries
 
+
+### Configure ESP8266-01 / wifi module
+
+
+
+### Configure RTC module
+
+
+## Sources
+* Kjell & Co: Ansluta Arduino till wifi https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/anslut-arduino-till-wifi
+* Kjell & Co: Håll tiden med Arduino https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/hall-tiden-med-arduino
