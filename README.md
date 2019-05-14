@@ -47,18 +47,16 @@ This can be done by connecting the module as shown in the image below, by connec
 
 1. Confirm that the module now can communicate at 9600 bd by changing the Serial monitor to 6900 baud, and again send `AT`. The response should be OK :)
 
-Now the module can be connected to GPIO 6 & 7 and communicate through these. 
+Now the module can be connected to GPIO 6 & 7 and communicate through these. [Source: Kjell&Co](https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/anslut-arduino-till-wifi)
 
 ![](https://github.com/knappologi/arduino-sound-sensor-with-wifi/blob/master/fritzsketch-setup-esp8266-01_smaller.png)
 
 
 
 ### Configure RTC module
-Before using the RTC module to fetch the time, initial set up to set the time is needed.
-This is done by connecting the RTC as shown in the image below.
-
-
-Then a code used to set the time according to when the codes compiles from the computer to arduino is used. 
+Before using the RTC module to fetch the current time, initial set up to configure the RTC is need.
+After connecting the RTC the Arduino, using the library RTC by Makuna, compile and run [following code from Hur funkar Arduino?](https://github.com/kjellcompany/Arduino_701/blob/master/RtcOledSetTime/RtcOledSetTime.ino) to set the time according to the compiled time of the code.
+ [Source: Kjell&Co](https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/hall-tiden-med-arduino)
 
 
 
