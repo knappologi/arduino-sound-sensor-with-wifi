@@ -97,3 +97,5 @@ After connecting the RTC the Arduino, using the library RTC by Makuna, compile a
 * Kjell & Co: Ansluta Arduino till wifi https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/anslut-arduino-till-wifi
 * Kjell & Co: Håll tiden med Arduino https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/hall-tiden-med-arduino
 * Adafruit: Measuring sound levels https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/measuring-sound-levels
+* Arduino.cc forums: Audio Codec Shield output as dB https://forum.arduino.cc/index.php?topic=432991.0
+* Arduino.cc forums: Arduino wifi shield - No socket available https://forum.arduino.cc/index.php?topic=170460.0
