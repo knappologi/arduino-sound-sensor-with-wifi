@@ -102,6 +102,7 @@ void loop() {
   delay(2000);
   
   getHTTPSWithGeneratedParam();
+  // getRequestHTTP()     
 
     // Read response from HTTP request
     while(client.available()&& status == WL_CONNECTED){
