@@ -18,6 +18,33 @@ Make sure to NOT connect the wifi module to anything higher than 3.3v!
 
 ![](https://github.com/knappologi/arduino-sound-sensor-with-wifi/blob/master/fritzsketchwifiunortcmax4466_smaller.png)
 
+## The code
+Included in this project are two different versions.
+One, soundreadings-wifi-httpget.ino that includes a GET request. Both through HTTP and HTTPS. The other, soundreadings-wifi-thingspeak.ino, sends data to a thingspeak channel.
+
+### HTTP GET
+In this version, theres is two different GET functions. A GET for HTTP and a GET for HTTPS that also uses a method to generate the GET path & parameters. 
+
+In the code: in setup for Wifi, modify the values for SSID and password to match the wifi you want to connect to.
+
+**For HTTP/ getRequestHTTP**:
+1. In the method getRequestHTTP change the values of serverAddress[], PARAM and YOUR-HOST. 
+1. Change in the loop method to use getRequestHTTP.
+
+**For HTTPS / getHTTPSWithGeneratedParam**:
+1. In the method getHTTPSWithGeneratedParam, change the value of server[] and HOSTNAME
+1. In the method formatStringForGetPost, change the values of sensorID (if needed/used), and the values of the concatenations of contentToSend. 
+
+
+### Sending to Thingspeak
+1. In the code: in setup for Wifi, modify the values for SSID and password to match the wifi you want to connect to.
+1. To send and post data to Thingspeak, an (free) account is needed: https://thingspeak.com/
+1. In thingspeak, create a channel for the purpose of uploading data. 
+1. After creating the channel, click on the tab API Keys and copy the Write Key to the code. 
+1. Modify the value of thingspeakAPIKey to your write key.
+1. Compile and run the code :)
+
+The code will simply send the value from the max4466 to the first field of the channel.
 
 
 ## Initial configuration
