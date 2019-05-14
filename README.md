@@ -20,7 +20,7 @@ Make sure to NOT connect the wifi module to anything higher than 3.3v!
 
 ## The code
 Included in this project are two different versions.
-One, soundreadings-wifi-httpget.ino that includes a GET request. Both through HTTP and HTTPS. The other, soundreadings-wifi-thingspeak.ino, sends data to a thingspeak channel.
+One, **soundreadings-wifi-httpget.ino** that includes a GET request, through HTTP or HTTPS with generated params. The other, **soundreadings-wifi-thingspeak.ino**, sends data to a thingspeak channel.
 
 ### HTTP GET
 In this version, theres is two different GET functions. A GET for HTTP and a GET for HTTPS that also uses a method to generate the GET path & parameters. 
@@ -45,6 +45,12 @@ In the code: in setup for Wifi, modify the values for SSID and password to match
 1. Compile and run the code :)
 
 The code will simply send the value from the max4466 to the first field of the channel.
+
+### Resources used and refered to within the code
+The getSoundLevelReading method is based on Adafruits code on how to [fetch sound level data](https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/measuring-sound-levels).
+A modification to the end output from the function, based on the calculations made from a [post in the arduino forums](https://forum.arduino.cc/index.php?topic=432991.0)
+
+In the loop method, client.flush and client.stop as been added to solve a problem when sending data ("No socket available"), according to [this thread on the Arduino forums](https://forum.arduino.cc/index.php?topic=170460.0). 
 
 
 ## Initial configuration
@@ -90,3 +96,4 @@ After connecting the RTC the Arduino, using the library RTC by Makuna, compile a
 ## Sources
 * Kjell & Co: Ansluta Arduino till wifi https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/anslut-arduino-till-wifi
 * Kjell & Co: Håll tiden med Arduino https://www.kjell.com/se/fraga-kjell/hur-funkar-det/arduino/arduino-projekt/hall-tiden-med-arduino
+* Adafruit: Measuring sound levels https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/measuring-sound-levels
