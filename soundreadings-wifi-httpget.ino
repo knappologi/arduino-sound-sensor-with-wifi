@@ -96,6 +96,13 @@ void setup() {
 }
 
 void loop() {
+   while (status != WL_CONNECTED) {
+    Serial.println("Disconnected. Attempt to reconnect...");
+    Serial.println("");
+    
+    connectToWifi();
+    delay(8000);
+  }
   
   printWifiStatus();
   createAndUpdateStrings();
@@ -204,6 +211,7 @@ void getHTTPSWithGeneratedParam(){
     Serial.println("Sent to server");
   }  else {
     Serial.println("Oh no! Failed to connect to server. :(");
+    status = WL_IDLE_STATUS;
   }
 }
 
@@ -220,6 +228,7 @@ void getRequestHTTP(){
     Serial.println("Sent to server");
   }  else {
     Serial.println("Oh no! Failed to connect to server.");
+    status = WL_IDLE_STATUS;
   }
 }
 
